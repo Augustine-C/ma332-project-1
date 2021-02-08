@@ -8,8 +8,9 @@ else
 end
 dates_val = getDatesVal(dates);
 f=fit(dates_val,data,method);
-plot(dates,f(dates_val),dates,data);
+plot(dates,f(dates_val),dates,data,'-');
 ylabel("cases");
 xlabel("days");
+legend("fitted","original data");
 title(strcat(country, '-' , type, " cases ", s, ' with'," ", method, ' fitting'));
 end
